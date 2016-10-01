@@ -1,7 +1,10 @@
 package edu.buffalo.cse.ubwins.cellmon.ui;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.LayoutInflater;
+import android.view.View;
 
 import edu.buffalo.cse.ubwins.cellmon.ui.R;
 
@@ -13,11 +16,14 @@ import edu.buffalo.cse.ubwins.cellmon.ui.R;
  * Copyright © 2016 Gautam. All rights reserved.
  */
 
-public class HandleTwo extends AppCompatActivity
+public class HandleTwo extends MainActivity
 {
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.two);
+        LayoutInflater inflater = (LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
+        View contentView = inflater.inflate(R.layout.two, null, false);
+        mDrawer.addView(contentView, 0);
     }
 }
