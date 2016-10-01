@@ -4,7 +4,7 @@ android {
     compileSdkVersion 23
     buildToolsVersion "23.0.2"
     defaultConfig {
-        applicationId "ubcomputerscience.ubwins.navigationexample"
+        applicationId "edu.buffalo.cse.ubwins.cellmon.ui"
         minSdkVersion 21
         targetSdkVersion 23
         versionCode 1

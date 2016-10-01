@@ -1,4 +1,4 @@
-package ubcomputerscience.ubwins.navigationexample;
+package edu.buffalo.cse.ubwins.cellmon.ui;
 
 import org.junit.Test;
 

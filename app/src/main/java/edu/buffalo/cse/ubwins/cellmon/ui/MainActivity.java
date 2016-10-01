@@ -13,7 +13,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import ubcomputerscience.ubwins.navigationexample.R;
+import edu.buffalo.cse.ubwins.cellmon.ui.R;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -98,8 +98,6 @@ public class MainActivity extends AppCompatActivity
         }
         else if (id == R.id.nav_gallery)
         {
-            Intent intent = new Intent(MainActivity.this, HandleTwo.class);
-            startActivity(intent);
         }
         else if (id == R.id.nav_slideshow)
         {
@@ -107,7 +105,8 @@ public class MainActivity extends AppCompatActivity
         }
         else if (id == R.id.nav_manage)
         {
-
+            Intent intent = new Intent(MainActivity.this, HandleTwo.class);
+            startActivity(intent);
         }
         else if (id == R.id.nav_share)
         {

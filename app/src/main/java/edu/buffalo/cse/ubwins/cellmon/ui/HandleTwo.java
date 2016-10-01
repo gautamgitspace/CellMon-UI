@@ -3,7 +3,7 @@ package edu.buffalo.cse.ubwins.cellmon.ui;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import ubcomputerscience.ubwins.navigationexample.R;
+import edu.buffalo.cse.ubwins.cellmon.ui.R;
 
 /**
  * Created by Gautam on 9/30/16.

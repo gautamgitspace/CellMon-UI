@@ -1,4 +1,4 @@
-package ubcomputerscience.ubwins.navigationexample;
+package edu.buffalo.cse.ubwins.cellmon.ui;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
