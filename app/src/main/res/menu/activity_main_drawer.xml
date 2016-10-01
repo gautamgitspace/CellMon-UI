@@ -1,24 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <group android:checkableBehavior="single">
+
         <item
-            android:id="@+id/nav_camera"
+            android:id="@+id/nav_home"
             android:icon="@mipmap/ic_action_computer"
             android:title="Home" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/nav_map_view"
             android:icon="@mipmap/ic_action_place"
             android:title="Map View" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/nav_statistics"
             android:icon="@mipmap/ic_action_time"
             android:title="Statistics" />
         <item
-            android:id="@+id/nav_manage"
+            android:id="@+id/nav_about"
             android:icon="@mipmap/ic_action_about"
             android:title="About" />
-    </group>
 
     <item android:title="">
         <menu>

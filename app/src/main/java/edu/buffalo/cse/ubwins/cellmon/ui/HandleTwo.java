@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 
 import edu.buffalo.cse.ubwins.cellmon.ui.R;
@@ -18,12 +19,19 @@ import edu.buffalo.cse.ubwins.cellmon.ui.R;
 
 public class HandleTwo extends MainActivity
 {
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        LayoutInflater inflater = (LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        setContentView(R.layout.two);
+    }
 
-        View contentView = inflater.inflate(R.layout.two, null, false);
-        mDrawer.addView(contentView, 0);
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch (item.getItemId()) {
+            case R.id.nav_about:
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
