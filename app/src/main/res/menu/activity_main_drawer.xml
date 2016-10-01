@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_camera"
+            android:icon="@mipmap/ic_action_computer"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@mipmap/ic_action_place"
+            android:title="Map View" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@mipmap/ic_action_time"
+            android:title="Statistics" />
+        <item
+            android:id="@+id/nav_manage"
+            android:icon="@mipmap/ic_action_about"
+            android:title="About" />
+    </group>
+
+    <item android:title="">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+        </menu>
+    </item>
+
+</menu>
