@@ -5,8 +5,8 @@ android {
     buildToolsVersion "23.0.2"
     defaultConfig {
         applicationId "edu.buffalo.cse.ubwins.cellmon.ui"
-        minSdkVersion 21
-        targetSdkVersion 23
+        minSdkVersion 18
+        targetSdkVersion 21
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
