@@ -1,4 +1,4 @@
-package edu.buffalo.cse.ubwins.cellmon.ui;
+package edu.buffalo.cse.ubwins.cellmon;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 
-import edu.buffalo.cse.ubwins.cellmon.ui.R;
 
 /**
  * Created by Gautam on 9/30/16.

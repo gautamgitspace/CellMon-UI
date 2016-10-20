@@ -1,4 +1,4 @@
-package edu.buffalo.cse.ubwins.cellmon.ui;
+package edu.buffalo.cse.ubwins.cellmon;
 
 import android.content.Intent;
 import android.os.Bundle;
