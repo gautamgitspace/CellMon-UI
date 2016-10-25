@@ -123,6 +123,8 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
                 return true;
 
             case R.id.nav_statistics :
+                Log.e("HERE", "STATS ACTIVITY");
+                startActivity(new Intent(this, PieChartActivity.class));
                 return true;
         }
 
