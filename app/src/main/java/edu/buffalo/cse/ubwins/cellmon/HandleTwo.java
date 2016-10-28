@@ -16,7 +16,7 @@ import android.view.View;
  * Copyright © 2016 Gautam. All rights reserved.
  */
 
-public class HandleTwo extends MainActivity
+public class HandleTwo extends BaseActivity
 {
     @Override
     protected void onCreate(Bundle savedInstanceState) {

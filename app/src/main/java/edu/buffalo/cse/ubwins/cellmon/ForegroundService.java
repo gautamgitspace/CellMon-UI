@@ -68,8 +68,6 @@ public class ForegroundService extends Service implements GoogleApiClient.Connec
     String IMEI_TO_POST;
 
 
-
-
     @Override
     public void onCreate()
     {

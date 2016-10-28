@@ -32,19 +32,21 @@ import com.github.mikephil.charting.utils.ColorTemplate;
 
 import java.util.ArrayList;
 
-public class PieChartActivity extends DemoBase implements OnSeekBarChangeListener,
-        OnChartValueSelectedListener {
+public class PieChartActivity extends BaseActivity implements OnSeekBarChangeListener, OnChartValueSelectedListener
+{
+
 
     private PieChart mChart;
     private SeekBar mSeekBarX, mSeekBarY;
     private TextView tvX, tvY;
 
+    private DemoBase demoBase;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
+        demoBase = new DemoBase();
         super.onCreate(savedInstanceState);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        //getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_piechart);
 
         tvX = (TextView) findViewById(R.id.tvXMax);
@@ -62,7 +64,7 @@ public class PieChartActivity extends DemoBase implements OnSeekBarChangeListene
 
         mChart.setDragDecelerationFrictionCoef(0.95f);
 
-        mChart.setCenterTextTypeface(mTfLight);
+        mChart.setCenterTextTypeface(demoBase.mTfLight);
         mChart.setCenterText(generateCenterSpannableText());
 
         mChart.setDrawHoleEnabled(true);
@@ -106,7 +108,7 @@ public class PieChartActivity extends DemoBase implements OnSeekBarChangeListene
 
         // entry label styling
         mChart.setEntryLabelColor(Color.WHITE);
-        mChart.setEntryLabelTypeface(mTfRegular);
+        mChart.setEntryLabelTypeface(demoBase.mTfRegular);
         mChart.setEntryLabelTextSize(12f);
     }
 
@@ -118,7 +120,11 @@ public class PieChartActivity extends DemoBase implements OnSeekBarChangeListene
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        return true;
+        switch (item.getItemId()) {
+            case R.id.nav_about:
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
@@ -139,7 +145,7 @@ public class PieChartActivity extends DemoBase implements OnSeekBarChangeListene
         // NOTE: The order of the entries when being added to the entries array determines their position around the center of
         // the chart.
         for (int i = 0; i < count; i++) {
-            entries.add(new PieEntry((float) ((Math.random() * mult) + mult / 5), mParties[i % mParties.length]));
+            entries.add(new PieEntry((float) ((Math.random() * mult) + mult / 5), demoBase.mParties[i % demoBase.mParties.length]));
         }
 
         PieDataSet dataSet = new PieDataSet(entries, "Cellular Coverage");
@@ -174,7 +180,7 @@ public class PieChartActivity extends DemoBase implements OnSeekBarChangeListene
         data.setValueFormatter(new PercentFormatter());
         data.setValueTextSize(11f);
         data.setValueTextColor(Color.WHITE);
-        data.setValueTypeface(mTfLight);
+        data.setValueTypeface(demoBase.mTfLight);
         mChart.setData(data);
 
         // undo all highlights

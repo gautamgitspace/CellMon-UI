@@ -12,7 +12,13 @@ import android.support.v4.app.FragmentActivity;
  * 
  * @author Philipp Jahoda
  */
-public abstract class DemoBase extends FragmentActivity {
+public class DemoBase extends FragmentActivity {
+
+    public DemoBase()
+    {
+
+    }
+
 
     protected String[] mMonths = new String[] {
             "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dec"
