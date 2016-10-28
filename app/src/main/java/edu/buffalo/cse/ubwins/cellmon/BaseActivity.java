@@ -120,6 +120,7 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
                 return true;
 
             case R.id.nav_map_view :
+                startActivity(new Intent(this, DatePickerFragment.class));
                 return true;
 
             case R.id.nav_statistics :

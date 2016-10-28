@@ -6,6 +6,12 @@
 
     <string name="action_settings">Settings</string>
 
+    <string name="hello_world">Hello world!</string>
+    <string name="date_label_set">Press the button to set the date</string>
+    <string name="date_button_set">Set Date</string>
+    <string name="date_view_set">The Date is: </string>
+    <string name="date_selected"></string>
+
     <string name="permission_available_location">Location Permission has been granted.</string>
     <string name="permission_available_storage">Storage Permissions have been granted.</string>
     <string name="permission_available_wakelock">WakeLock Permissions have been granted.</string>
