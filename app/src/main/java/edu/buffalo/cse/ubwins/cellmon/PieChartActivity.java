@@ -117,16 +117,7 @@ public class PieChartActivity extends BaseActivity implements OnSeekBarChangeLis
         getMenuInflater().inflate(R.menu.pie, menu);
         return true;
     }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.nav_about:
-                return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
+    
     @Override
     public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
 

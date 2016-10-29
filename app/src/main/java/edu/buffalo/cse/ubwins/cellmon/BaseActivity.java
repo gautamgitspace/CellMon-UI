@@ -118,15 +118,15 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
                 Log.e("HERE", "MAIN ACTIVITY");
                 startActivity(new Intent(this, MainActivity.class));
                 return true;
-
-            case R.id.nav_map_view :
-                startActivity(new Intent(this, DatePickerFragment.class));
-                return true;
-
             case R.id.nav_statistics :
                 Log.e("HERE", "STATS ACTIVITY");
                 startActivity(new Intent(this, PieChartActivity.class));
                 return true;
+            case R.id.nav_map_view :
+                startActivity(new Intent(this, DatePickerFragment.class));
+                return true;
+
+
         }
 
         return super.onOptionsItemSelected(item);
