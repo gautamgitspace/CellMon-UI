@@ -10,6 +10,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.Calendar;
+import java.util.Date;
 
 /**
  * Created by Gautam on 10/28/16.
@@ -50,13 +51,23 @@ public class DatePickerFragment extends BaseActivity
     {
         if (id == 555)
         {
-            return new DatePickerDialog(this, myDateListener, year, month, day);
+            DatePickerDialog datePickerDialog =  new DatePickerDialog(this, myDateListener, year, month, day);
+            datePickerDialog.getDatePicker().setMaxDate(new Date().getTime());
+            Date today = new Date();
+            Calendar c = Calendar.getInstance();
+            c.setTime(today);
+            /*set min date to 6 months back*/
+            c.add( Calendar.MONTH, -6);
+            long minDate = c.getTime().getTime();
+            datePickerDialog.getDatePicker().setMinDate(minDate);
+            return  datePickerDialog;
         }
         return null;
     }
 
     private DatePickerDialog.OnDateSetListener myDateListener = new DatePickerDialog.OnDateSetListener()
     {
+
         @Override
         public void onDateSet(DatePicker arg0, int arg1, int arg2, int arg3)
         {
